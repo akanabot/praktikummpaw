@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container header label {
+    align-items: center;
+    display: list-item;
+    color: rgb(70, 25, 25);
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.nav-container header { 
+    align-items: center;
+    width: 100%;
+}
+
+.nav-container ul {
+    
+    align-items: center;
+    float:center;
+}
+
+.nav-container li a {
+    align-items: center;
+    display: block;
+    color: white;
+    padding: 0 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: center;
+    height: auto;
+}
+
+.nav-container li a:hover {
+    border-bottom: none;
+}
+
+.nav-container .logo {
+    position: absolute;
+    right: 20px;
+    z-index: 1000;
+}
+
+.nav-container .logo img {
+    width: 80px;
+}
+
+.nav-container nav {
+    display: none;
+}
+
+.nav-container header input:checked~nav {
+    display: flex;
+}
