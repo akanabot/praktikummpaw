@@ -1,0 +1,530 @@
+:root {
+    --main-color: #ffffff;
+    --main-color-hover: #ffffff;
+    --dark-color: rgb(85, 38, 139);
+    --container-width: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.7em;
+    padding: 0.3em 1.2em;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 30px;
+    border: 2px solid;
+    font-size: 1.1em;
+}
+
+.button:hover {
+    background-color: var(--main-color-hover);
+    color: #2e2a2a;
+    transition: all 0.3s;
+}
+
+
+
+/* BREAKPOINT TABLET */
+@media screen and (max-width: 768px) {
+    /* Kode CSS Di Sini */
+
+    /* HEADER */
+    .nav-container header label {
+        align-items: center;
+        display: list-item;
+        color: white;
+        font-style: normal;
+        font-size: 2rem;
+    }
+
+    .nav-container header {
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-container li a {
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        align-items: center;
+        display: inline-block;
+        color: white;
+        padding: 0 2em;
+        text-decoration: none;
+        text-transform: lowercase;
+        height: auto;
+    }
+
+    .nav-container li a:hover {
+        border-bottom: none;
+    }
+
+
+    .nav-container .logo {
+        position: absolute;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .nav-container .logo img {
+        width: 80px;
+    }
+
+    .nav-container nav {
+        display: none;
+    }
+
+    .nav-container header input:checked~nav {
+        display: flex;
+    }
+
+    /* END OF HEADER */
+
+    /* BLOG */
+    .blog-index .snippet {
+        width: auto;
+        margin: 1rem 2rem;
+    }
+
+    /* END OF BLOG */
+
+    /* FOOTER */
+    .footer-container {
+        padding: 2rem;
+    }
+
+    .footer-menu section {
+        width: 48%;
+        margin-bottom: 2rem;
+    }
+
+    .footer-copyright div {
+        margin-bottom: 2rem;
+    }
+
+    .footer-copyright a:first-child {
+        margin-left: 0;
+    }
+
+    /* END OF FOOTER */
+
+
+}
+
+/* BREAKPOINT HANDPHONE */
+@media screen and (max-width: 481px) {
+    /* Kode CSS Di Sini */
+
+    /* BLOG */
+    .blog-container .snippet {
+        width: 98%;
+    }
+
+    .blog-index {
+        justify-content: center;
+    }
+
+    /* END OF BLOG */
+
+    /* FOOTER */
+    .footer-menu section {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* END OF FOOTER */
+
+
+
+}
+
+/* HEADER */
+.nav-container {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Memusatkan navbar */
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    position: sticky;
+}
+
+.nav-container .button {
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 50;
+    right: 7%;
+    /* Adjust to keep logo aligned left */
+    bottom: 10;
+}
+
+.nav-container .logo {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    /* Adjust to keep logo aligned left */
+    bottom: 0;
+}
+
+.nav-container .logo img {
+    width: 120px;
+    padding-top: 10px;
+}
+
+.nav-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Memusatkan item dalam navbar */
+}
+
+.nav-container li {
+    margin: 0 10px;
+}
+
+.nav-container li a {
+    display: block;
+    color: white;
+    padding: 0 1.1em;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 60px;
+    text-align: center;
+}
+
+.nav-container li a:hover {
+    color: var(--main-color);
+    transition: all 0.3s;
+    border-bottom: 5px solid var(--main-color);
+}
+
+.nav-container header label,
+#hamburger {
+    display: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: 2px solid #000000;
+    /* Change this to your desired border color */
+    border-radius: 5px;
+    /* Rounded borders */
+    outline: none;
+    /* Remove default outline */
+    margin-right: 0px;
+    /* Space between input and button */
+}
+
+.search-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    /* Rounded borders */
+    background-color: #000000;
+    /* Change this to your desired button color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #050007;
+    /* Darker shade for hover effect */
+}
+
+/* END OF HEADER */
+/* HERO */
+.hero-container {
+    background-image: url("https://bis-sby.telkomuniversity.ac.id/wp-content/uploads/2024/04/Frame-12.png");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: static;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 4em;
+}
+
+.hero-text p {
+    font-size: 2em;
+    margin: 0;
+    color: var(--dark-color);
+}
+
+/* END OF HERO */
+/* HERO */
+.hero-text h1 {
+    font-size: 3em;
+}
+
+/* END OF HERO */
+/* SHOWCASE */
+
+.sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+    float: right;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+.kategori-container {
+
+    padding: 1em 2em;
+    border-radius: 10px;
+    /* Rounded corners */
+    width: 300px;
+    /* Width of the box */
+    font-family: Arial, sans-serif;
+    /* Subtle shadow */
+    text-align: left;
+    /* Left align for the text */
+}
+.kategori-container h3 {
+    font-size: 18px;
+    color: #333; /* Darker text color */
+    margin-bottom: 15px;
+  }
+  
+  /* List styling */
+  .kategori-container ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  /* List item styling */
+  .kategori-container ul li {
+    font-size: 16px;
+    color: #333; /* Darker text color */
+    margin-bottom: 10px;
+  }
+
+.sidebar-container {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Mengatur arah elemen flex menjadi kolom */
+    gap: 10px;
+    /* Menambahkan jarak antar aside */
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    /* Warna latar belakang */
+    padding: 20px;
+    /* Padding dalam aside */
+    border-radius: 5px;
+    /* Sudut membulat */
+}
+
+.showcase-container:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.showcase {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.showcase-image,
+.showcase-text {
+    width: 50%;
+    margin: 1em;
+}
+
+.showcase-image img {
+    width: 100%;
+    border: 1px solid silver;
+    padding: 0.3rem;
+}
+
+/* END OF SHOWCASE */
+
+/* SHOWCASE */
+.showcase {
+    flex-direction: column;
+    padding: 1em 2em;
+}
+
+.showcase-image,
+.showcase-text {
+    width: auto;
+}
+
+/* END OF SHOWCASE */
+
+/* BLOG */
+.blog-container {
+    max-width: var(--container-width);
+    margin: 3rem auto;
+    text-align: left;
+}
+
+.blog-container header {
+    padding: 0 2em;
+    text-align: center;
+}
+
+.blog-container header hr {
+    width: 25%;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.blog-index {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.blog-index .snippet {
+    width: 32%;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+.blog-index .snippet-img {
+    height: 35%;
+    width: 100%;
+}
+
+.blog-index .snippet-txt {
+    padding: 0 1em;
+}
+
+.blog-index .snippet-txt small {
+    color: #999;
+}
+
+/* END OF BLOG */
+/* FOOTER */
+.footer-container {
+    margin-top: 3rem;
+    color: white;
+    background-color: rgb(31, 31, 31);
+    padding: 2rem 1rem;
+}
+
+.footer-container hr {
+    color: #2e2a2a;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+.footer-menu {
+    max-width: var(--container-width);
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.footer-menu section {
+    width: 23%;
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-container ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-menu h3 {
+    margin-top: 0;
+}
+
+.logo-container img {
+    height: auto;
+    width: 225px;
+}
+
+.footer-copyright {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.footer-copyright a {
+    margin-left: 0.5rem;
+}
+
+.footer-copyright a:hover {
+    text-decoration: none;
+}
+
+/* END OF FOOTER */
